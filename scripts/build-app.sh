@@ -29,6 +29,13 @@ mkdir -p "$APP_DIR/Contents/MacOS" "$APP_DIR/Contents/Resources"
 cp "$BINARY_DIR/DiskLens" "$APP_DIR/Contents/MacOS/.DiskLens.next"
 # Replace the inode atomically, so rebuilding never truncates a running executable.
 mv -f "$APP_DIR/Contents/MacOS/.DiskLens.next" "$APP_DIR/Contents/MacOS/DiskLens"
+if [[ "$CONFIGURATION" == "release" ]]; then
+    xcrun strip -S -x "$APP_DIR/Contents/MacOS/DiskLens"
+    if strings -a "$APP_DIR/Contents/MacOS/DiskLens" | grep -F "$PROJECT_DIR" >/dev/null; then
+        echo "Release binary contains the local project path." >&2
+        exit 1
+    fi
+fi
 cp Resources/Info.plist "$APP_DIR/Contents/Info.plist"
 cp -R Resources/en.lproj Resources/zh-Hans.lproj "$APP_DIR/Contents/Resources/"
 if [[ -f Resources/StorageMasterIcon.icns ]]; then
