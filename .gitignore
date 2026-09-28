@@ -1,0 +1,14 @@
+.build/
+.swiftpm/
+dist/
+.DS_Store
+*.pdf
+.env
+.env.*
+*.pem
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/

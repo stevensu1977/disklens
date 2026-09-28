@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "DiskLens";
+"CFBundleName" = "DiskLens";
+"NSDocumentsFolderUsageDescription" = "Scan files in Documents to review disk usage and choose what to remove.";
+"NSDownloadsFolderUsageDescription" = "Find installers, large files, and duplicate downloads.";
+"NSDesktopFolderUsageDescription" = "Scan files on your Desktop to review disk usage and choose what to remove.";
+"NSHumanReadableCopyright" = "DiskLens · Local disk analyzer";

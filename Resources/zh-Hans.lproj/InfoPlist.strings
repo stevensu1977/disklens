@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "盘点 · DiskLens";
+"CFBundleName" = "盘点 · DiskLens";
+"NSDocumentsFolderUsageDescription" = "扫描文稿中的文件占用，并由你确认清理。";
+"NSDownloadsFolderUsageDescription" = "查找下载目录中的安装包、大文件和重复下载。";
+"NSDesktopFolderUsageDescription" = "扫描桌面中的文件占用，并由你确认清理。";
+"NSHumanReadableCopyright" = "盘点 · DiskLens";
